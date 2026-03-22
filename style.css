@@ -1,0 +1,536 @@
+/* ===========================
+   Base Styles
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333333;
+}
+
+a {
+    color: #003399;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0044cc;
+}
+
+h1 {
+    font-size: 30px;
+    color: #003399;
+    margin-bottom: 6px;
+}
+
+h2 {
+    font-size: 18px;
+    color: #003399;
+    border-bottom: 2px solid #003399;
+    padding-bottom: 6px;
+    margin-bottom: 16px;
+}
+
+h3 {
+    font-size: 15px;
+    color: #222;
+    margin-bottom: 4px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #444444;
+    margin-bottom: 10px;
+}
+
+img {
+    border: 2px solid #aaaaaa;
+    display: block;
+}
+
+/* ===========================
+   Layout — Flexbox
+   Header uses flexbox to align
+   logo and nav links side by side
+=========================== */
+header {
+    background-color: #003399;
+    padding: 12px 24px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    /* Flexbox */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo:hover {
+    text-decoration: none;
+    color: #ccddff;
+}
+
+nav {
+    /* Flexbox — nav links in a row */
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ===========================
+   Container
+=========================== */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 24px 20px;
+}
+
+/* ===========================
+   Section Box
+=========================== */
+.section-box {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 24px;
+    margin-bottom: 20px;
+}
+
+/* ===========================
+   Hero — Flexbox
+   Photo and text sit side by side
+=========================== */
+.hero-inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;
+}
+
+.hero-photo {
+    width: 160px;
+    height: 190px;
+    background-color: #dddddd;
+    border: 2px solid #aaaaaa;
+    flex-shrink: 0;
+
+    /* Flexbox — center the placeholder text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #888888;
+    text-align: center;
+}
+
+.hero-photo img {
+    width: 160px;
+    height: 190px;
+    object-fit: cover;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-tag {
+    font-size: 13px;
+    color: #555555;
+    margin-bottom: 8px;
+}
+
+.hero-buttons {
+    /* Flexbox — buttons in a row */
+    display: flex;
+    gap: 10px;
+    margin-top: 14px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #003399;
+    color: #ffffff;
+    padding: 8px 18px;
+    font-size: 13px;
+    border: 1px solid #003399;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #0044cc;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.btn-outline {
+    background-color: #ffffff;
+    color: #003399;
+}
+
+.btn-outline:hover {
+    background-color: #eef0ff;
+    color: #003399;
+}
+
+/* ===========================
+   Stats Row — Flexbox
+=========================== */
+.stats-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 18px;
+    flex-wrap: wrap;
+}
+
+.stat-box {
+    background-color: #eef0ff;
+    border: 1px solid #aabbff;
+    padding: 12px 18px;
+    text-align: center;
+    flex: 1;
+    min-width: 100px;
+}
+
+.stat-box .num {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #003399;
+}
+
+.stat-box .lbl {
+    display: block;
+    font-size: 11px;
+    color: #666666;
+    margin-top: 2px;
+}
+
+/* ===========================
+   Skills — CSS Grid
+   3-column grid layout
+=========================== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.skills-grid li {
+    background-color: #f4f4ff;
+    border: 1px solid #ccccff;
+    padding: 8px 12px;
+    font-size: 13px;
+    color: #333333;
+}
+
+ol.ranked {
+    padding-left: 20px;
+    font-size: 14px;
+    color: #444;
+    line-height: 2;
+}
+
+/* ===========================
+   Ventures — Flexbox cards
+=========================== */
+.venture-item {
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.venture-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.venture-item:nth-child(even) {
+    background-color: #f9f9ff;
+    padding: 12px;
+}
+
+.venture-role {
+    font-size: 12px;
+    color: #003399;
+    font-style: italic;
+    margin-bottom: 6px;
+}
+
+.venture-desc {
+    font-size: 13px;
+    color: #555555;
+}
+
+.new-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #cc0000;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 7px;
+}
+
+/* ===========================
+   Education Table
+=========================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+th {
+    background-color: #003399;
+    color: #ffffff;
+    padding: 9px 12px;
+    text-align: left;
+    font-size: 13px;
+}
+
+td {
+    padding: 9px 12px;
+    border-bottom: 1px solid #e0e0e0;
+    vertical-align: top;
+}
+
+tr:nth-child(even) td {
+    background-color: #f4f4ff;
+}
+
+tr:hover td {
+    background-color: #e8ecff;
+}
+
+/* ===========================
+   Contact
+=========================== */
+
+/* Flexbox — two columns: links left, form right */
+.contact-inner {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+}
+
+.contact-links-col {
+    flex: 1;
+}
+
+.contact-form-col {
+    flex: 1;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-list li {
+    padding: 9px 0;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 14px;
+    color: #444444;
+}
+
+.contact-list li:last-child {
+    border-bottom: none;
+}
+
+form label {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: #333333;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #cccccc;
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #003399;
+    outline: none;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    background-color: #003399;
+    color: #ffffff;
+    border: none;
+    padding: 9px 22px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0044cc;
+}
+
+button.reset-btn {
+    background-color: #888888;
+}
+
+button.reset-btn:hover {
+    background-color: #666666;
+}
+
+/* ===========================
+   Span helpers
+=========================== */
+span.highlight {
+    color: #003399;
+    font-weight: bold;
+}
+
+span.badge {
+    display: inline-block;
+    background-color: #eef0ff;
+    border: 1px solid #aabbff;
+    font-size: 11px;
+    padding: 2px 8px;
+    margin-right: 4px;
+    color: #003399;
+}
+
+/* ===========================
+   Footer — Flexbox
+=========================== */
+footer {
+    border-top: 1px solid #cccccc;
+    padding: 16px 0 28px;
+    margin-top: 8px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #888888;
+}
+
+/* ===========================
+   Responsive Design — Media Queries
+   Tablet: max-width 768px
+   Mobile: max-width 480px
+=========================== */
+
+@media (max-width: 768px) {
+
+    /* Stack hero photo above text */
+    .hero-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    /* Skills: 2 columns on tablet */
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Stats wrap naturally */
+    .stat-box {
+        min-width: 120px;
+    }
+
+    /* Contact: stack columns */
+    .contact-inner {
+        flex-direction: column;
+    }
+
+    /* Footer: stack */
+    footer {
+        flex-direction: column;
+        gap: 6px;
+        text-align: center;
+    }
+
+    /* Hide some table columns on smaller screens */
+    table th:last-child,
+    table td:last-child {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Navbar: stack on very small screens */
+    header {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    /* Skills: single column on mobile */
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Stats: 2 per row */
+    .stats-row {
+        gap: 8px;
+    }
+
+    .stat-box {
+        min-width: 80px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .container {
+        padding: 16px 12px;
+    }
+}
