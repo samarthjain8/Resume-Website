@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Samarth Jain - My Portfolio</title>
+
+        <!-- Bootstrap 5 CSS Framework (CDN) -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        />
+
+        <!-- My custom stylesheet (loaded after Bootstrap so it overrides where needed) -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+
+        <!-- Header — Flexbox via custom CSS + Bootstrap sticky-top utility -->
+        <header>
+            <a href="#home" class="logo">Samarth Jain</a>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#ventures">Ventures</a>
+                <a href="#education">Education</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="container">
+
+                <!-- Hero Section — Flexbox layout -->
+                <section class="section-box" id="home">
+                    <div class="hero-inner">
+
+                        <div class="hero-photo">
+                            <!-- Replace src with your photo file path -->
+                            <img
+                                src="photo.jpg"
+                                alt="Photo of Samarth Jain"
+                                width="160"
+                                height="190"
+                                onerror="this.style.display='none'; this.parentNode.innerHTML='[ Your Photo Here ]';"
+                            />
+                        </div>
+
+                        <div class="hero-text">
+                            <h1>Samarth Jain</h1>
+                            <p class="hero-tag">
+                                <span class="highlight">BBA DBE, IIM Bangalore</span> &nbsp;|&nbsp;
+                                <span class="highlight">ACCA Aspirant</span> &nbsp;|&nbsp;
+                                Delhi, India
+                            </p>
+                            <p>
+                                Entrepreneurial strategist with strong interests in finance,
+                                technology, brand building, and market strategy. Experienced in
+                                developing early-stage ventures and building scalable products
+                                for long-term market leadership.
+                            </p>
+                            <div class="hero-buttons">
+                                <a href="#ventures" class="btn">My Ventures</a>
+                                <a href="#contact" class="btn btn-outline">Contact Me</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- About Section -->
+                <section class="section-box" id="about">
+                    <h2>About Me</h2>
+
+                    <p>
+                        Hi! I am <span class="highlight">Samarth Jain</span>, a first year
+                        <span class="highlight">BBA Digital Business &amp; Entrepreneurship</span>
+                        student at <span class="highlight">IIM Bangalore (2025&ndash;2028 batch)</span>.
+                        I am also pursuing the <span class="highlight">ACCA qualification</span>.
+                    </p>
+                    <p>
+                        I have worked on early-stage ventures in health innovation and water
+                        technology. I love building things and I am always looking for new
+                        opportunities to learn and grow.
+                    </p>
+                    <p>
+                        <strong>Languages I speak:</strong>
+                        <span class="badge">English</span>
+                        <span class="badge">Hindi</span>
+                        <span class="badge">Spanish (basic)</span>
+                        <span class="badge">French (basic)</span>
+                    </p>
+
+                    <!-- Stats — Flexbox row -->
+                    <div class="stats-row">
+                        <div class="stat-box">
+                            <span class="num">IIMB</span>
+                            <span class="lbl">Institution</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="num">ACCA</span>
+                            <span class="lbl">In Progress</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="num">2+</span>
+                            <span class="lbl">Ventures</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="num">4</span>
+                            <span class="lbl">Languages</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Skills Section — CSS Grid layout -->
+                <section class="section-box" id="skills">
+                    <h2>My Skills</h2>
+
+                    <!-- CSS Grid: 3-column grid defined in style.css -->
+                    <ul class="skills-grid">
+                        <li>Entrepreneurship</li>
+                        <li>Strategic Marketing</li>
+                        <li>Business Strategy</li>
+                        <li>Python Programming</li>
+                        <li>Data Analysis</li>
+                        <li>Team Leadership</li>
+                        <li>Market Research</li>
+                        <li>Public Speaking</li>
+                        <li>Digital Marketing</li>
+                        <li>Web Development</li>
+                        <li>Brand Design</li>
+                        <li>Project Management</li>
+                    </ul>
+
+                    <p><strong>Top 3 Strengths (ranked):</strong></p>
+                    <ol class="ranked">
+                        <li>Entrepreneurship &amp; Venture Building</li>
+                        <li>Strategic Marketing &amp; Brand Design</li>
+                        <li>Team Leadership &amp; Project Management</li>
+                    </ol>
+                </section>
+
+                <!-- Ventures Section -->
+                <section class="section-box" id="ventures">
+                    <h2>Ventures &amp; Experience</h2>
+
+                    <article class="venture-item">
+                        <h3>Technical &amp; Marketing Team Lead</h3>
+                        <p class="venture-role">School Interdisciplinary Societies</p>
+                        <p class="venture-desc">
+                            Led the technical and marketing teams across interdisciplinary academic
+                            societies — Arts, Biology, Commerce, and STEM groups. Managed
+                            communication, outreach, and promotional activities. Contributed to
+                            strategic planning and execution of academic and innovation-driven
+                            activities.
+                        </p>
+                    </article>
+
+                    <article class="venture-item">
+                        <span class="new-badge">NEW</span>
+                        <h3>Monk Fruit Health Venture</h3>
+                        <p class="venture-role">Founder</p>
+                        <p class="venture-desc">
+                            Health-focused food innovation venture centered around monk fruit as
+                            a natural sweetener. Currently in concept and development phase.
+                            Building a premium health-oriented consumer brand with strategic
+                            positioning within the alternative sweetener industry.
+                        </p>
+                    </article>
+
+                    <article class="venture-item">
+                        <h3>Neeb Aqua</h3>
+                        <p class="venture-role">Concept Developer, Manager &amp; Operations Lead</p>
+                        <p class="venture-desc">
+                            Water enhancement technology focused on improving mineral composition
+                            of drinking water. Developed the core concept, managed operational
+                            planning, led product strategy including technical feasibility and
+                            market positioning.
+                        </p>
+                    </article>
+                </section>
+
+                <!-- Education — Bootstrap table utility classes + custom styles -->
+                <section class="section-box" id="education">
+                    <h2>Education</h2>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Year</th>
+                                <th>Degree / Qualification</th>
+                                <th>Institution</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2025 &ndash; 2028</td>
+                                <td>BBA in Digital Business &amp; Entrepreneurship</td>
+                                <td>IIM Bangalore</td>
+                                <td>Currently Enrolled</td>
+                            </tr>
+                            <tr>
+                                <td>Ongoing</td>
+                                <td>ACCA &mdash; Chartered Certified Accountants</td>
+                                <td>Global Qualification</td>
+                                <td>Pursuing</td>
+                            </tr>
+                            <tr>
+                                <td>Completed</td>
+                                <td>Senior Secondary &mdash; CBSE Class XII (Commerce)</td>
+                                <td>Delhi, India</td>
+                                <td>Completed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- Contact — Flexbox two-column layout -->
+                <section class="section-box" id="contact">
+                    <h2>Contact Me</h2>
+
+                    <div class="contact-inner">
+
+                        <!-- Left column: contact links -->
+                        <div class="contact-links-col">
+                            <ul class="contact-list">
+                                <li>&#128231; Email:
+                                    <a href="mailto:jainsamarth2007@gmail.com">jainsamarth2007@gmail.com</a>
+                                </li>
+                                <li>&#128222; Phone:
+                                    <a href="tel:+919599226080">+91 95992 26080</a>
+                                </li>
+                                <li>&#128188; LinkedIn:
+                                    <a href="https://www.linkedin.com/in/samarth-jain-b64bb2348/" target="_blank">
+                                        linkedin.com/in/samarth-jain-b64bb2348
+                                    </a>
+                                </li>
+                                <li>&#128196; Resume:
+                                    <a href="resume.pdf">Download PDF</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Right column: contact form -->
+                        <div class="contact-form-col">
+                            <form action="mailto:jainsamarth2007@gmail.com" method="GET">
+
+                                <label for="fname">Your Name:</label>
+                                <input
+                                    type="text"
+                                    id="fname"
+                                    name="name"
+                                    placeholder="Enter your name"
+                                />
+
+                                <label for="femail">Your Email:</label>
+                                <input
+                                    type="email"
+                                    id="femail"
+                                    name="email"
+                                    placeholder="Enter your email"
+                                />
+
+                                <label for="fmessage">Your Message:</label>
+                                <textarea
+                                    id="fmessage"
+                                    name="message"
+                                    rows="4"
+                                    placeholder="Write your message here..."
+                                ></textarea>
+
+                                <div class="form-buttons">
+                                    <button type="submit">Send Message</button>
+                                    <button type="reset" class="reset-btn">Reset</button>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Footer — Flexbox -->
+                <footer>
+                    <p>&copy; 2025 Samarth Jain &nbsp;|&nbsp; IIM Bangalore</p>
+                    <p>Made by me :)</p>
+                </footer>
+
+            </div>
+        </main>
+
+        <!-- Bootstrap 5 JS (for interactive components) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+
+</html>
